@@ -71,25 +71,28 @@
   #define Y_STOP_PIN                       P1_28  // Y-STOP
 #endif
 
-#ifdef Z_STALL_SENSITIVITY
-  #define Z_STOP_PIN                  Z_DIAG_PIN
-  #if Z_HOME_DIR < 0
-    #define Z_MAX_PIN                      P1_00  // PWRDET
-  #else
-    #define Z_MIN_PIN                      P1_00  // PWRDET
-  #endif
-#else
-  #ifndef Z_STOP_PIN
-    #define Z_STOP_PIN                     P1_27  // Z-STOP
-  #endif
-#endif
+//#ifdef Z_STALL_SENSITIVITY
+  //#define Z_STOP_PIN                  Z_DIAG_PIN
+  //#if Z_HOME_DIR < 0
+    //#define Z_MAX_PIN                      P1_00  // PWRDET
+  //#else
+    //#define Z_MIN_PIN                      P1_00  // PWRDET
+  //#endif
+//#else
+  //#ifndef Z_STOP_PIN
+   //#define Z_STOP_PIN                     P1_27  // Z-STOP
+  //#endif
+//#endif
+
+#define Z_MIN_PIN                            P0_10  // PROBE PIN
+#define Z_MAX_PIN                            P1_27  // ZMIN PIN
 
 //
 // Z Probe (when not Z_MIN_PIN)
 //
-#ifndef Z_MIN_PROBE_PIN
-  #define Z_MIN_PROBE_PIN                  P0_10
-#endif
+//#ifndef Z_MIN_PROBE_PIN
+  //#define Z_MIN_PROBE_PIN                  P0_10
+//#endif
 
 //
 // Filament Runout Sensor
