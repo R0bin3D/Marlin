@@ -173,7 +173,7 @@
   /**
    * Whenever an M104, M109, or M303 increases the target temperature, the
    * firmware will wait for the WATCH_TEMP_PERIOD to expire. If the temperature
-   * hasn't increased by WATCH_TEMP_INCREASE degrees, the machine is halted and
+   * hasn't increased by WATCH_TEMP_INCREASE degrxfees, the machine is halted and
    * requires a hard reset. This test restarts with any M104/M109/M303, but only
    * if the current temperature is far enough below the target for a reliable
    * test.
@@ -836,7 +836,7 @@
 // Increase the slowdown divisor for larger buffer sizes.
 #define SLOWDOWN
 #if ENABLED(SLOWDOWN)
-  #define SLOWDOWN_DIVISOR 2
+  #define SLOWDOWN_DIVISOR 8
 #endif
 
 /**
