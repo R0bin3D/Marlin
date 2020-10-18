@@ -2470,22 +2470,22 @@
    */
   //#define HYBRID_THRESHOLD
 
-  #define X_HYBRID_THRESHOLD     100  // [mm/s]
-  #define X2_HYBRID_THRESHOLD    100
-  #define Y_HYBRID_THRESHOLD     100
-  #define Y2_HYBRID_THRESHOLD    100
-  #define Z_HYBRID_THRESHOLD       3
-  #define Z2_HYBRID_THRESHOLD      3
-  #define Z3_HYBRID_THRESHOLD      3
-  #define Z4_HYBRID_THRESHOLD      3
-  #define E0_HYBRID_THRESHOLD     30
-  #define E1_HYBRID_THRESHOLD     30
-  #define E2_HYBRID_THRESHOLD     30
-  #define E3_HYBRID_THRESHOLD     30
-  #define E4_HYBRID_THRESHOLD     30
-  #define E5_HYBRID_THRESHOLD     30
-  #define E6_HYBRID_THRESHOLD     30
-  #define E7_HYBRID_THRESHOLD     30
+  #define X_HYBRID_THRESHOLD      85  // [mm/s]
+  #define X2_HYBRID_THRESHOLD     85
+  #define Y_HYBRID_THRESHOLD      85
+  #define Y2_HYBRID_THRESHOLD     85
+  #define Z_HYBRID_THRESHOLD      20
+  #define Z2_HYBRID_THRESHOLD     20
+  #define Z3_HYBRID_THRESHOLD     20
+  #define Z4_HYBRID_THRESHOLD     20
+  #define E0_HYBRID_THRESHOLD      1
+  #define E1_HYBRID_THRESHOLD      1
+  #define E2_HYBRID_THRESHOLD      1
+  #define E3_HYBRID_THRESHOLD      1
+  #define E4_HYBRID_THRESHOLD      1
+  #define E5_HYBRID_THRESHOLD      1
+  #define E6_HYBRID_THRESHOLD      1
+  #define E7_HYBRID_THRESHOLD      1
 
   /**
    * Use StallGuard to home / probe X, Y, Z.
@@ -2563,14 +2563,7 @@
    *   stepperY.intpol(0); \
    * }
    */
-  #define TMC_ADV() { \
-       stepperX.toff(4);\
-       stepperX.hend(2);\
-       stepperX.hstrt(1);\
-       stepperY.toff(4);\
-       stepperY.hend(2);\
-       stepperY.hstrt(1);\
-}
+  #define TMC_ADV() {}
 
 #endif // HAS_TRINAMIC_CONFIG
 
