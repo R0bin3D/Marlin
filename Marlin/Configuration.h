@@ -500,10 +500,15 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-  // VORON 1.8
-  #define DEFAULT_Kp 20.92
-  #define DEFAULT_Ki 1.94
-  #define DEFAULT_Kd 56.48
+  // VORON 1.8 TriangleLab Plated Copper V6
+  //#define DEFAULT_Kp 20.92
+  //#define DEFAULT_Ki 1.94
+  //#define DEFAULT_Kd 56.48
+
+  // VORON 1.8 Phaetus Plated Copper Dragon
+  #define DEFAULT_Kp 17.50
+  #define DEFAULT_Ki 1.55
+  #define DEFAULT_Kd 49.45
   #endif
 #endif // PIDTEMP
 
@@ -988,7 +993,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, 25, -2.5 }
+#define NOZZLE_TO_PROBE_OFFSET { 0, 25, -2.175 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
